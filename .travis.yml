@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "6.4.0"
+service:
+  - mysql
+before_install:
+  - "npm install grunt-cli -g"
+install:
+  - "npm install"
+  - "export TRAVIS=1"
+before_script:
+  - mysql -e 'create database test;'
